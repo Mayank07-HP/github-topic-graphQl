@@ -32,8 +32,8 @@ Best of luck
 
 ### How to run app & test
 
-- Do npm install to get all dependencies
-- Then do npm start to run project on local url
+- Do *npm install* to get all dependencies
+- Then do *npm start* to run project on local url
 
 ### Future Improvements
 
