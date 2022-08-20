@@ -47,7 +47,7 @@ Feel free to elaborate on how you would improve any of the following topics
 - Refactoring:
 
   - Make component for error text
-  - Component for loading page.
+  - Component for loader .
 
 - Additional Features:
   - Using typescripts in order to Tightly couple everything with graph ql.
