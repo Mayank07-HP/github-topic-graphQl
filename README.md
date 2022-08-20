@@ -33,7 +33,7 @@ Best of luck
 ### How to run app & test
 
 - Do npm install to get all dependencies
-- then do npm start to run project on local url
+- Then do npm start to run project on local url
 
 ### Future Improvements
 
