@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import { Col, Row, Space } from "antd";
+import { SearchBar, TopicDetails } from "./component";
 
 function App() {
+  const [searchText, setSearchText] = useState("react");
+
+  const onSearch = text => {
+    setSearchText(text);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="main_container">
+        <Row justify="center">
+          <Col span={20}>
+            <SearchBar searchText={searchText} onSearch={onSearch} />
+            <div>
+              <h1>Topic Name: {searchText}</h1>
+            </div>
+            <TopicDetails
+              searchText={searchText}
+              onRelatedTopicClick={onSearch}
+            />
+          </Col>
+        </Row>
+      </div>
     </div>
   );
 }
