@@ -32,8 +32,8 @@ Best of luck
 
 ### How to run app & test
 
-- Do npm install to get all dependencies
-- then do npm start to run project on local url
+- Do *npm install* to get all dependencies
+- Then do *npm start* to run project on local url
 
 ### Future Improvements
 
@@ -47,7 +47,7 @@ Feel free to elaborate on how you would improve any of the following topics
 - Refactoring:
 
   - Make component for error text
-  - Component for loading page.
+  - Component for loader .
 
 - Additional Features:
   - Using typescripts in order to Tightly couple everything with graph ql.
