@@ -51,3 +51,7 @@ Feel free to elaborate on how you would improve any of the following topics
 
 - Additional Features:
   - Using typescripts in order to Tightly couple everything with graph ql.
+
+### UI Result
+
+-
