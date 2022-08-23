@@ -58,7 +58,7 @@ it("renders with MockedProvider", async () => {
   );
 
   expect(
-    getByText("Loading topics, please wait until its fetch..")
+    getByText("Loading topics, Let us fetch best results for you...")
   ).toBeInTheDocument();
   expect(queryByTestId("topics-card")).not.toBeInTheDocument();
 });
