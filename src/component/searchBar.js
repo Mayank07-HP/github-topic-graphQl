@@ -1,10 +1,14 @@
 import { Input, Row, Col } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const { Search } = Input;
 
 export const SearchBar = ({ onSearch, searchText }) => {
   const [text, setText] = useState(searchText);
+
+  useEffect(() => {
+    setText(searchText);
+  }, [searchText]);
   return (
     <Row span={24}>
       <Col span={16}>
@@ -13,11 +17,12 @@ export const SearchBar = ({ onSearch, searchText }) => {
       <Col span={8}>
         <Search
           value={text}
+          data-testid = "search button"
           size="large"
           enterButton="Search"
           placeholder="Search For Topics"
           onSearch={onSearch}
-          onChange={e => setText(e.target.value)}
+          onChange={(e) => setText(e.target.value)}
         />
       </Col>
     </Row>

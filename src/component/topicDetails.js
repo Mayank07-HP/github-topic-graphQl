@@ -5,7 +5,7 @@ import { SEARCH_TOPIC } from "../query";
 
 export const TopicDetails = ({ searchText, onRelatedTopicClick }) => {
   const { loading, error, data } = useQuery(SEARCH_TOPIC, {
-    variables: { searchText: `topic:${searchText}` }
+    variables: { searchText: `topic:${searchText}` },
   });
 
   if (loading) {
@@ -30,7 +30,7 @@ export const TopicDetails = ({ searchText, onRelatedTopicClick }) => {
   }
 
   return (
-    <>
+    <div data-testid="topics-card">
       {data &&
         data.search.edges &&
         data.search.edges.map((edge, index) => (
@@ -39,6 +39,7 @@ export const TopicDetails = ({ searchText, onRelatedTopicClick }) => {
             {edge.node.repositoryTopics.nodes.map((tree, i) => (
               <Button
                 key={i}
+                data-testid="topics_button"
                 className="topics_button"
                 onClick={() => {
                   onRelatedTopicClick(tree.topic.name);
@@ -53,6 +54,6 @@ export const TopicDetails = ({ searchText, onRelatedTopicClick }) => {
             ))}
           </Card>
         ))}
-    </>
+    </div>
   );
 };
