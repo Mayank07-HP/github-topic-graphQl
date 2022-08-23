@@ -10,9 +10,9 @@ export const SearchBar = ({ onSearch, searchText }) => {
     setText(searchText);
   }, [searchText]);
   return (
-    <Row span={24}>
+    <Row span={24} className="header-container">
       <Col span={16}>
-        <h2>Search For Topics</h2>
+        <h2 className="heading">Search For Topics</h2>
       </Col>
       <Col span={8}>
         <Search
